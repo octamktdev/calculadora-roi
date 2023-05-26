@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de ROI - Alavanca de vendas</title>
+</head>
+<body>
+    <section class="page-section">
+        <div class="row">
+            <div class="col-md">
+                <h2>Diagnóstico de vendas</h2>
+                <div class="form-box">
+                        <div class="question">
+                            <label for="">Quantos visitas mensais você tem no site?</label>
+                            <input type="number" name="nmr_visitas_site_mensal" id="visitas_site_mensal">
+                        </div>
+                       
+                        <div class="question">
+                           <label for="">Quantas levantadas de mão você recebe por mês?</label>
+                            <input type="number" name="nmr_leads_mensal" id="leads_mensal"> 
+                        </div>
+                        
+                        <div class="question">
+                            <label for="">Quantos contatos se qualificam por mês?</label>
+                            <input type="number" name="nmr_oportunidades" id="nmr_oportunidades">
+                        </div>
+                
+                        <div class="question">
+                            <label for="">Quantas vendas em média você faz por mês?</label>
+                            <input type="number" name="nmr_vendas_mensal" id="vendas_mensal">
+                        </div>
+                
+                        <div class="question">
+                            <label for="">Qual é o seu ticket médio?</label>
+                            <input type="number" name="valor_ticket_medio" id="ticket_medio">
+                        </div>
+                        <button class="btn-blue" onclick="calculate();">Calcular</button>
+                        
+                    </div>
+            </div>
+            <div class="col-md results">
+                <h2>Resultados</h2>
+                <div class="result-item"> 
+                    <p>Seu número de visitas continuará sendo o mesmo:</p>
+                    <h4 id="result_visitas" class="result-number"></h4> 
+                </div>
+                <div class="result-item">
+                    <p>Você vai seguir com a mesma quantidade de levantadas de mão: </p> 
+                    <h4 id="result_leads" class="result-number"></h4> 
+                </div>
+                <div class="result-item">
+                    <p>Mas aqui a mágica acontece. Você vai qualificar 80% mais pessoas: </p> 
+                    <h4 id="result_ql_octadesk"></h4>
+                </div>
+                <div class="result-item">
+                    <p>Mantendo sua taxa de conversão você pode até dobrar suas vendas:</p> 
+                    <h4 id="result_double_vendas"></h4>
+                </div>
+                <div class="result-item">
+                    <p>Seu ticket também vai se manter o mesmo:</p> 
+                    <h4 id="result_ticket_medio"></h4>
+                </div>
+                <div class="result-item">
+                    <p>Ganho no número de vendas mensais:</p> 
+                    <h4 id="result_acresc_vendas"></h4>
+                </div>
+                <div class="result-item">
+                    <p>Faturamento total mensal:</p> 
+                    <h4 id="result_faturamento_w_octa"></h4>
+                </div>
+                <div class="result-item">
+                    <p>Faturamento total acumulado anual: </p> 
+                    <h4></h4>
+                </div>
+                <div class="result-item">
+                    <p>Aumento da receita anual:</p> 
+                    <h4 id="result_acresc_receita_anual"></h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
